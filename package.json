@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Expressjs project",
   "main": "app.js",
+  "engines": {
+    "node": "20.4.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "NODE_ENV=production DATABASE_CONNECTION_STRING=mongodb://127.0.0.1:27017/shop?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.1 node app.js",
