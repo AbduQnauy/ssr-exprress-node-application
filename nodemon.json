@@ -1,0 +1,7 @@
+{
+  "env": {
+    "DATABASE_CONNECTION_STRING": "mongodb://127.0.0.1:27017/shop?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.1",
+    "PORT": 3000,
+    "STRIPE_KEY": "sk_test_pUbHfyf87MAl7GZksbjdpMLu00KBMqstgb"
+  }
+}

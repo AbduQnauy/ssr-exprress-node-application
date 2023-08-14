@@ -1,0 +1,6 @@
+
+.login-form{
+    display: block;
+    width: min(25%, 300px);
+    margin: 0 auto;
+  }

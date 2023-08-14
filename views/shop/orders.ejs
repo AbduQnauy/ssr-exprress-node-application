@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+
+  <body>
+    <%- include("../includes/navigation.ejs") %>
+    <main>
+      <% if (!orders.length) { %>
+      <h1>Nothing there!</h1>
+      <% } else{ %>
+      <ul>
+        <% orders.forEach(order => { %>
+        <li>
+          <h1>
+            # <%= order._id %> - <a href="/orders/<%= order._id %>">invoice</a>
+          </h1>
+          <ul>
+            <% order.items.map(product => { %>
+            <li><%= product.title %> (<%= product.quantity %>)</li>
+            <% }) %>
+          </ul>
+        </li>
+        <% }) %>
+      </ul>
+      <% } %>
+    </main>
+  </body>
+  <script src="/js/main.js"></script>
+</html>
